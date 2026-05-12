@@ -1,0 +1,12 @@
+output: dist/
+releases:
+  - name: production
+    jobs:
+      - name: release-deb
+        package:
+          platform: linux
+          target: deb
+          # Optional: Override details if they differ from pubspec.yaml
+          build_args:
+            dart-define:
+              APP_VERSION: 1.0.0
